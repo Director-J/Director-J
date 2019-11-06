@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="https://github.com/Director-J/Director-J.github.io">
   <title>WEB复习笔记 | 蒋导的码厂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#9.03##静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。##动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互##软件的体系结构###客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）： 服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求">
+  <meta name="description" content="9.03静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。 动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互  软件的体系结构  客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）：  服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WEB复习笔记">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;WEB%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="蒋导的码厂">
-<meta property="og:description" content="#9.03##静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。##动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互##软件的体系结构###客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）： 服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求">
+<meta property="og:description" content="9.03静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。 动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互  软件的体系结构  客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）：  服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T12:34:24.612Z">
+<meta property="og:updated_time" content="2019-11-06T12:38:16.947Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -172,16 +172,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#9.03<br>##静态网页<br>  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。<br>##动态网页<br>  服务器端可以根据客户端的请求，动态产生网页内容。   </p>
+        <h1 id="9-03"><a href="#9-03" class="headerlink" title="9.03"></a>9.03</h1><h2 id="静态网页"><a href="#静态网页" class="headerlink" title="静态网页"></a>静态网页</h2><p>  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。</p>
+<h2 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a>动态网页</h2><p>  服务器端可以根据客户端的请求，动态产生网页内容。   </p>
 <ul>
 <li>两个特点：</li>
 </ul>
 <ul>
 <li>可以动态产生页面</li>
-<li>支持客户端和服务端的交互<br>##软件的体系结构<br>###客户机/服务器（c/s）模式（胖客户端模式）：</li>
-<li>服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器将数据传送给客户机进行计算，计算结果可以返回给服务器。</li>
-<li>客户端先简单预处理，然后将处理后的结果提交给服务器进一步处理。<br>###浏览器/服务器（B/S）模式（瘦客户模式）：</li>
-<li>用通用的浏览器代替各种应用软件，服务器则为Web服务器。浏览器和服务器之间通过TCP/IP通信协议进行连接，浏览器发出请求，由Web服务器向后台取出数据进行计算并将结果返回给浏览器。</li>
+<li>支持客户端和服务端的交互</li>
+</ul>
+<h2 id="软件的体系结构"><a href="#软件的体系结构" class="headerlink" title="软件的体系结构"></a>软件的体系结构</h2><p>  客户机/服务器（c/s）模式（胖客户端模式）：</p>
+<ul>
+<li><p>服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器将数据传送给客户机进行计算，计算结果可以返回给服务器。</p>
+</li>
+<li><p>客户端先简单预处理，然后将处理后的结果提交给服务器进一步处理。</p>
+<p>浏览器/服务器（B/S）模式（瘦客户模式）：</p>
+</li>
+<li><p>用通用的浏览器代替各种应用软件，服务器则为Web服务器。浏览器和服务器之间通过TCP/IP通信协议进行连接，浏览器发出请求，由Web服务器向后台取出数据进行计算并将结果返回给浏览器。</p>
+</li>
 </ul>
 
       
