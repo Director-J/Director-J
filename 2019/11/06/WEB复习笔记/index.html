@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="9.03静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。 动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互  软件的体系结构  客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）：  服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-07T05:13:14.529Z">
+<meta property="og:updated_time" content="2019-11-07T13:55:50.563Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -180,28 +180,28 @@
 </li>
 </ul>
 <h1 id="9-04"><a href="#9-04" class="headerlink" title="9.04"></a>9.04</h1><h2 id="JSP工作过程"><a href="#JSP工作过程" class="headerlink" title="JSP工作过程"></a>JSP工作过程</h2><p>  1.客户在浏览器地址栏目输入要请求的JSP页面的URL，发出一个JSP请求。<br>  2.Web服务器接受“JSP文件”的请求，出发JSP引擎。<br>  3.JSP引擎检查JSP文件是新的还是修改过的，针对不同情况对文件进行翻译和编译，把JSP标签、JAVA代码HTML内容都转换为Servlet代码，扩展名为.java的文件。<br>  4.将产生的Servlet代码编译执行。<br>  5.将结果返回浏览器，浏览器解释执行HTML页面，把结果展示给用户。</p>
-<h2 id="HTML（超文本标记语言）知识要点"><a href="#HTML（超文本标记语言）知识要点" class="headerlink" title="HTML（超文本标记语言）知识要点"></a>HTML（超文本标记语言）知识要点</h2><pre><code>1.HTML文档的基本结构
+<h2 id="HTML（超文本标记语言）知识要点"><a href="#HTML（超文本标记语言）知识要点" class="headerlink" title="HTML（超文本标记语言）知识要点"></a>HTML（超文本标记语言）知识要点</h2><p>1.HTML文档的基本结构</p>
+<html>
+    <head>
+    </head>
 
-    &lt;html&gt;
-        &lt;head&gt;
-        &lt;/head&gt;
+<pre><code>&lt;body&gt;
+&lt;/body&gt;</code></pre></html>
 
-        &lt;body&gt;
-        &lt;/body&gt;
-    &lt;/html&gt;
-
-2.HTML标签、属性
-   &lt;标签&gt;HTML元素的内容&lt;/标签&gt;
-
-- 标签必须是有效的
-- 标签大多数成对出现
-- 标签不区分大小写
-- 标签可以联合嵌套使用
-- 标签可以带有一个或者多个属性
-
-3.HTML文档头标签
-- 文档类型声明&lt;!DOCTYPE&gt;
-- 文档头标签&lt;head&gt;</code></pre><h1 id="9-10"><a href="#9-10" class="headerlink" title="9.10"></a>9.10</h1><h2 id="常用的标签列表"><a href="#常用的标签列表" class="headerlink" title="常用的标签列表"></a>常用的标签列表</h2><ul>
+<p>2.HTML标签、属性<br>   &lt;标签&gt;HTML元素的内容&lt;/标签&gt;</p>
+<ul>
+<li>标签必须是有效的</li>
+<li>标签大多数成对出现</li>
+<li>标签不区分大小写</li>
+<li>标签可以联合嵌套使用</li>
+<li>标签可以带有一个或者多个属性</li>
+</ul>
+<p>3.HTML文档头标签</p>
+<ul>
+<li>文档类型声明&lt;!DOCTYPE&gt;</li>
+<li>文档头标签<head></head></li>
+</ul>
+<h1 id="9-10"><a href="#9-10" class="headerlink" title="9.10"></a>9.10</h1><h2 id="常用的标签列表"><a href="#常用的标签列表" class="headerlink" title="常用的标签列表"></a>常用的标签列表</h2><ul>
 <li><p>标题标签</p>
 <blockquote>
 <p>&lt;hn align=”left|center|right”&gt;标题&lt;/hn&gt;</p>
@@ -217,7 +217,62 @@
 <p>&lt;p&gt;内容&lt;/p&gt;</p>
 </blockquote>
 </li>
+<li><p>水平分割线标签</p>
+<blockquote>
+<p>&lt;hr/gt;<br>&lt;hr align=”center” noshade=”noshade” size=”1px” width=”80%” color=”#FF0000” /gt;</p>
+</blockquote>
+</li>
+<li><p>HTML注释</p>
+<blockquote>
+<p>&lt;!–注释的内容–&gt;</p>
+</blockquote>
+</li>
+<li><p>空格（字符实体）</p>
+<blockquote>
+<p>&nbsp;</p>
+</blockquote>
+</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>实体名</th>
+<th>符号</th>
+<th>实体名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空格</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 
       
 
@@ -352,14 +407,11 @@
           </div>
         </div>
       </div>
-      <span id="busuanzi_container_page_pv">
-   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
-</span>
-<footer id="footer">
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; 2019 蒋导
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -367,10 +419,6 @@
     </div>
   </div>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
 
     </div>
     <script>
