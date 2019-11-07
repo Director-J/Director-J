@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="9.03静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。 动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互  软件的体系结构  客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）：  服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-07T13:55:50.563Z">
+<meta property="og:updated_time" content="2019-11-07T13:58:00.486Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -229,7 +229,7 @@
 </li>
 <li><p>空格（字符实体）</p>
 <blockquote>
-<p>&nbsp;</p>
+<p>&amp; nbsp;</p>
 </blockquote>
 </li>
 </ul>
@@ -407,11 +407,14 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
+      <span id="busuanzi_container_page_pv">
+   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
+</span>
+<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 蒋导
+    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -419,6 +422,10 @@
     </div>
   </div>
 </footer>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
+</span>
 
     </div>
     <script>
