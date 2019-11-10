@@ -315,7 +315,47 @@
 <li><p>&lt;input&gt;</p>
 </li>
 </ul>
-<p><strong><em>一些重要的属性</em></strong><br>| 属性 | 描述 |<br>| —- | —- |<br>| type | 制定控件类型 |<br>| name | 定义控件标识 |<br>| value | 提供控件输入域的初始值 |<br>| maxlength | 允许输入的最多字符 |<br>| size | 定义控件输入域的大小 |<br>| checked | 复选框和单选按钮的初始状态 |<br>| src | 图像按钮的图像所在位置 |<br>| align | 图像的对齐方式 | </p>
+<p><strong><em>一些重要的属性</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>制定控件类型</td>
+</tr>
+<tr>
+<td>name</td>
+<td>定义控件标识</td>
+</tr>
+<tr>
+<td>value</td>
+<td>提供控件输入域的初始值</td>
+</tr>
+<tr>
+<td>maxlength</td>
+<td>允许输入的最多字符</td>
+</tr>
+<tr>
+<td>size</td>
+<td>定义控件输入域的大小</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>复选框和单选按钮的初始状态</td>
+</tr>
+<tr>
+<td>src</td>
+<td>图像按钮的图像所在位置</td>
+</tr>
+<tr>
+<td>align</td>
+<td>图像的对齐方式</td>
+</tr>
+</tbody></table>
 <ul>
 <li>&lt;input type=”  “&gt;<ul>
 <li>text: name不区分大小写，显式显示</li>
@@ -413,21 +453,31 @@
 </ul>
 <p>  2.id和class</p>
 <ul>
-<li><p>使用id名来标识页面上的元素，且id名是唯一的；</p>
-</li>
-<li><p>使用class名通常来标识一类元素的名字，可指多个元素；</p>
-</li>
-<li><p><strong><em>注意</em></strong></p>
-</li>
-<li><p>尽可能按照名称语义命名，与其表现方式无关。</p>
-</li>
-<li><p>CSS本身对大小写无关，但与之关联的html文档可能对大小写有关，因此尽可能保持大小写一致。</p>
-</li>
-<li><p>不要过度使用类名，要学会灵活运用选择符类型。</p>
-</li>
+<li>使用id名来标识页面上的元素，且id名是唯一的；</li>
+<li>使用class名通常来标识一类元素的名字，可指多个元素；</li>
+</ul>
+<p>  <strong><em>注意</em></strong></p>
+<ul>
+<li>尽可能按照名称语义命名，与其表现方式无关。</li>
+<li>CSS本身对大小写无关，但与之关联的html文档可能对大小写有关，因此尽可能保持大小写一致。</li>
+<li>不要过度使用类名，要学会灵活运用选择符类型。</li>
 </ul>
 </li>
 </ul>
+<h3 id="类选择符的用法"><a href="#类选择符的用法" class="headerlink" title="类选择符的用法"></a><strong><em>类选择符的用法</em></strong></h3><ul>
+<li>Html标签的class属性设置的值前面加”.”</li>
+</ul>
+<blockquote>
+<p>用一个元素定义不同的样式</p>
+<blockquote>
+<p>&lt;class=”stop”&gt;这是stop的样式(html)<br>p.stop{color:red}(css)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>关联class选择符：同一个元素定义不同的样式</p>
+<blockquote>
+</blockquote>
+</blockquote>
 
       
 
