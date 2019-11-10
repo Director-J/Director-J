@@ -403,8 +403,17 @@
 <p>选择符{属性1：值1；属性2：值2}</p>
 </blockquote>
 </li>
-<li><p><strong><em>选择符</em></strong><br>  1.元素选择符（标签选择符）</p>
-</li>
+<li><p><strong><em>选择符</em></strong><br>  1.元素选择符（标签选择符）作用域为所有符合条件的html标签</p>
+<blockquote>
+<p>h1{text-align:center;color:red}</p>
+<pre><code>- 优点：能够快速为页面中同类型的统一样式；
+- 缺点：不能设计差异化样式，有时候会互相干扰；</code></pre><p>  2.id和class</p>
+<pre><code>- 使用id名来标识页面上的元素，且id名是唯一的；
+- 使用class名通常来标识一类元素的名字，可指多个元素；</code></pre></blockquote>
+<pre><code>-***注意***
+    - 尽可能按照名称语义命名，与其表现方式无关。
+    - CSS本身对大小写无关，但与之关联的html文档可能对大小写有关，因此尽可能保持大小写一致。
+    - 不要过度使用类名，要学会灵活运用选择符类型。</code></pre></li>
 </ul>
 
       

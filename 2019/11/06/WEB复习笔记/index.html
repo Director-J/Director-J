@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="9.03静态网页  静态网页的缺点是：如果修改网页，必须修改源代码，重新上传。 动态网页  服务器端可以根据客户端的请求，动态产生网页内容。     两个特点：   可以动态产生页面 支持客户端和服务端的交互  软件的体系结构  客户机&#x2F;服务器（c&#x2F;s）模式（胖客户端模式）：  服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-10T06:28:29.238Z">
+<meta property="og:updated_time" content="2019-11-10T10:00:36.566Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -402,8 +402,17 @@
 <p>选择符{属性1：值1；属性2：值2}</p>
 </blockquote>
 </li>
-<li><p><strong><em>选择符</em></strong><br>  1.元素选择符（标签选择符）</p>
-</li>
+<li><p><strong><em>选择符</em></strong><br>  1.元素选择符（标签选择符）作用域为所有符合条件的html标签</p>
+<blockquote>
+<p>h1{text-align:center;color:red}</p>
+<pre><code>- 优点：能够快速为页面中同类型的统一样式；
+- 缺点：不能设计差异化样式，有时候会互相干扰；</code></pre><p>  2.id和class</p>
+<pre><code>- 使用id名来标识页面上的元素，且id名是唯一的；
+- 使用class名通常来标识一类元素的名字，可指多个元素；</code></pre></blockquote>
+<pre><code>-***注意***
+    - 尽可能按照名称语义命名，与其表现方式无关。
+    - CSS本身对大小写无关，但与之关联的html文档可能对大小写有关，因此尽可能保持大小写一致。
+    - 不要过度使用类名，要学会灵活运用选择符类型。</code></pre></li>
 </ul>
 
       
