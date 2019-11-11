@@ -141,6 +141,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-自己觉得会考的WEB题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/11/%E8%87%AA%E5%B7%B1%E8%A7%89%E5%BE%97%E4%BC%9A%E8%80%83%E7%9A%84WEB%E9%A2%98/">自己觉得会考的WEB题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/11/%E8%87%AA%E5%B7%B1%E8%A7%89%E5%BE%97%E4%BC%9A%E8%80%83%E7%9A%84WEB%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2019-11-11T08:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="选择和名词解释部分"><a href="#选择和名词解释部分" class="headerlink" title="选择和名词解释部分"></a>选择和名词解释部分</h1><h2 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h2><ul>
+<li><p>HTML:超文本标记语言</p>
+</li>
+<li><p>CSS：层叠样式表</p>
+</li>
+<li><p>URL ：统一资源定位符</p>
+</li>
+</ul>
+<h2 id="什么是计算机网络"><a href="#什么是计算机网络" class="headerlink" title="什么是计算机网络"></a>什么是计算机网络</h2><ul>
+<li>用通信线路和通信设备，将分布在不同地点的有独立功能的多个计算机系统连接起来，在软件的支持下，实现数据通信和资源共享。</li>
+</ul>
+<h2 id="静态网页"><a href="#静态网页" class="headerlink" title="静态网页"></a>静态网页</h2><ul>
+<li>静态网页是相对于动态网页而言，是指没有后台数据库、不含程序和不可交互的网页。</li>
+<li><img src="/Director-J/Director-J.github/static_page.png" alt="图片无法显示"></li>
+</ul>
+<h3 id="静态网页的特点："><a href="#静态网页的特点：" class="headerlink" title="静态网页的特点："></a>静态网页的特点：</h3><ul>
+<li>如果修改网页，必须修改源代码，重新上传。</li>
+</ul>
+<h2 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a>动态网页</h2><ul>
+<li>服务器端可以根据客户端的请求，动态产生网页内容。</li>
+<li><img src="/Director-J/Director-J.github/active_page.png" alt="图片无法显示"></li>
+</ul>
+<h3 id="两个特点："><a href="#两个特点：" class="headerlink" title="两个特点："></a>两个特点：</h3><ul>
+<li>可以动态产生页面</li>
+<li>支持客户端和服务端的交互</li>
+</ul>
+<h2 id="软件的体系结构"><a href="#软件的体系结构" class="headerlink" title="软件的体系结构"></a>软件的体系结构</h2><p>客户机/服务器（c/s）模式（胖客户端模式）：</p>
+<ul>
+<li>服务器集中管理数据，计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯，客户机向服务器发出数据请求，服务器将数据传送给客户机进行计算，计算结果可以返回给服务器。</li>
+<li>客户端先简单预处理，然后将处理后的结果提交给服务器进一步处理。</li>
+</ul>
+<p>浏览器/服务器（B/S）模式（瘦客户模式）：</p>
+<ul>
+<li>用通用的浏览器代替各种应用软件，服务器则为Web服务器。浏览器和服务器之间通过TCP/IP通信协议进行连接，浏览器发出请求，由Web服务器向后台取出数据进行计算并将结果返回给浏览器。</li>
+</ul>
+<h2 id="JSP工作过程"><a href="#JSP工作过程" class="headerlink" title="JSP工作过程"></a>JSP工作过程</h2><p>1.客户在浏览器地址栏目输入要请求的JSP页面的URL，发出一个JSP请求。<br>2.Web服务器接受“JSP文件”的请求，出发JSP引擎。<br>3.JSP引擎检查JSP文件是新的还是修改过的，针对不同情况对文件进行翻译和编译，把JSP标签、JAVA代码HTML内容都转换为Servlet代码，扩展名为.java的文件。<br>4.将产生的Servlet代码编译执行。<br>5.将结果返回浏览器，浏览器解释执行HTML页面，把结果展示给用户。</p>
+<ul>
+<li><img src="/Director-J/Director-J.github/jsp_.png" alt="图片无法显示"></li>
+</ul>
+<h1 id="设计部分"><a href="#设计部分" class="headerlink" title="设计部分"></a>设计部分</h1><h2 id="表格的跨行和跨列"><a href="#表格的跨行和跨列" class="headerlink" title="表格的跨行和跨列"></a>表格的跨行和跨列</h2><ul>
+<li><p>单元格跨两列：</p>
+  <table border="1">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>555 77 854</td>
+    <td>555 77 855</td>
+  </tr>
+  </table>
+</li>
+<li><p><img src="/Director-J/Director-J.github/table_row.png" alt="图片无法显示"></p>
+</li>
+<li><p>单元格跨两行：</p>
+  <table border="1">
+  <tr>
+    <th>First Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>555 77 854</td>
+  </tr>
+  <tr>
+    <td>555 77 855</td>
+  </tr>
+  </table>
+</li>
+<li><p><img src="/Director-J/Director-J.github/table_col.png" alt="图片无法显示"></p>
+</li>
+</ul>
+<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/11/%E8%87%AA%E5%B7%B1%E8%A7%89%E5%BE%97%E4%BC%9A%E8%80%83%E7%9A%84WEB%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-WEB复习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -524,11 +659,19 @@
 </li>
 <li><p>样式的继承：所有嵌套在某个html标签中的html标签都会继承外层标签设置的样式规则</p>
 </li>
-<li><p>央视规则的优先级：id选择符&gt;class选择符&gt;元素选择符</p>
+<li><p>样式规则的优先级：id选择符&gt;class选择符&gt;元素选择符</p>
 </li>
 </ul>
 <h3 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a><strong><em>CSS盒子模型</em></strong></h3><p><img src="/Director-J/Director-J.github/box_model.png" alt="图片无法显示！" title="盒子模型"></p>
-
+<ul>
+<li>常用的块级元素：&lt;div&gt;</li>
+<li>常用的行内元素：&lt;span&gt;</li>
+</ul>
+<h3 id="CSS样式-布局和定位"><a href="#CSS样式-布局和定位" class="headerlink" title="CSS样式-布局和定位"></a>CSS样式-布局和定位</h3><ul>
+<li>css定位机制：</li>
+</ul>
+<p>1.普通流(从上到下，从左到右)<br>2.浮动<br>3.定位</p>
+<h3 id="浮动属性"><a href="#浮动属性" class="headerlink" title="浮动属性"></a>浮动属性</h3>
       
 
       
@@ -576,11 +719,14 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
+      <span id="busuanzi_container_page_pv">
+   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
+</span>
+<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 蒋导
+    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -588,6 +734,10 @@
     </div>
   </div>
 </footer>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
+</span>
 
     </div>
     <script>
