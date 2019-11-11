@@ -20,7 +20,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github&#x2F;jsp_.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github&#x2F;table_row.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github&#x2F;table_col.png">
-<meta property="og:updated_time" content="2019-11-11T09:28:44.361Z">
+<meta property="og:updated_time" content="2019-11-11T09:34:14.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github&#x2F;static_page.png">
   
@@ -205,6 +205,21 @@
 <ul>
 <li><img src="/Director-J/Director-J.github/jsp_.png" alt="图片无法显示"></li>
 </ul>
+<h2 id="CSS设置方式"><a href="#CSS设置方式" class="headerlink" title="CSS设置方式"></a>CSS设置方式</h2><ul>
+<li>内联样表表（在body中，各标签+style属性）</li>
+</ul>
+<blockquote>
+<p>&lt;body stytle=”margin-left:200px”&gt;<br>&lt;body leftmargin=”200px”&gt;</p>
+</blockquote>
+<ul>
+<li><p>内部样表表（在head中）</p>
+</li>
+<li><p>链接外部样式表（写在head中，&lt;link&gt;）</p>
+</li>
+</ul>
+<blockquote>
+<p>&lt;head&gt;<br><strong><em>&lt;link rel=”stylesheet” type=”text/css” href=”style.css”/&gt;</em></strong><br>&lt;/head&gt;</p>
+</blockquote>
 <h1 id="设计部分"><a href="#设计部分" class="headerlink" title="设计部分"></a>设计部分</h1><h2 id="表格的跨行和跨列"><a href="#表格的跨行和跨列" class="headerlink" title="表格的跨行和跨列"></a>表格的跨行和跨列</h2><ul>
 <li><p>单元格跨两列：</p>
   <table border="1">
@@ -239,7 +254,8 @@
 <li><p><img src="/Director-J/Director-J.github/table_col.png" alt="图片无法显示"></p>
 </li>
 </ul>
-<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2>
+<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2><p>- </p>
+
       
 
       
@@ -383,14 +399,11 @@
           </div>
         </div>
       </div>
-      <span id="busuanzi_container_page_pv">
-   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
-</span>
-<footer id="footer">
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; 2019 蒋导
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -398,10 +411,6 @@
     </div>
   </div>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
 
     </div>
     <script>
