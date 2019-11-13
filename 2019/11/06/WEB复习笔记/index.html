@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://c-ssl.duitang.com/uploads/item/201701/12/20170112001032_SZTfi.thumb.700_0.jpeg" class="js-avatar">
+			<img src="/img/_icon.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">蒋导</a></h1>
@@ -58,8 +58,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -79,8 +77,6 @@
 				
 					<a class="github" target="_blank" href="https://github.com/Director-J" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/925317326" title="qq"><i class="icon-qq"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -97,15 +93,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://c-ssl.duitang.com/uploads/item/201701/12/20170112001032_SZTfi.thumb.700_0.jpeg" class="js-avatar">
+				<img src="/img/_icon.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">蒋导</h1>
 			</hgroup>
 			
 			
-			
-				
 			
 				
 			
@@ -116,8 +110,6 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Director-J" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/925317326" title="qq"><i class="icon-qq"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -125,9 +117,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -685,11 +675,14 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
+      <span id="busuanzi_container_page_pv">
+   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
+</span>
+<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 蒋导
+    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -697,6 +690,10 @@
     </div>
   </div>
 </footer>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
+</span>
 
     </div>
     <script>
