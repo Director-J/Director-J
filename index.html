@@ -44,7 +44,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/_icon.png" class="js-avatar">
+			<img src="source/img/_icon.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">蒋导</a></h1>
@@ -90,7 +90,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/_icon.png" class="js-avatar">
+				<img src="source/img/_icon.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">蒋导</h1>
@@ -154,9 +154,65 @@
         <h1 id="概述部分"><a href="#概述部分" class="headerlink" title="概述部分"></a>概述部分</h1><ul>
 <li>软件生存期的六个步骤：制定计划，需求分析，设计，程序编码，测试，运行维护。</li>
 </ul>
-<h2 id="软件开发过程模型"><a href="#软件开发过程模型" class="headerlink" title="软件开发过程模型"></a>软件开发过程模型</h2><h3 id="瀑布模型：瀑布模型（Waterfall-Model）-是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈。"><a href="#瀑布模型：瀑布模型（Waterfall-Model）-是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈。" class="headerlink" title="瀑布模型：瀑布模型（Waterfall Model） 是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈。"></a>瀑布模型：瀑布模型（Waterfall Model） 是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈。</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<h2 id="软件开发过程模型"><a href="#软件开发过程模型" class="headerlink" title="软件开发过程模型"></a>软件开发过程模型</h2><h3 id="瀑布模型："><a href="#瀑布模型：" class="headerlink" title="瀑布模型："></a>瀑布模型：</h3><p>瀑布模型（Waterfall Model） 是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈。</p>
+<h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
 <li>阶段之间具有顺序性和依赖性</li>
 <li>文档驱动</li>
+<li>适合一些实现过程完毕之后就会被抛弃的系统<ul>
+<li>需求明确</li>
+<li>功能单一，规模小</li>
+<li>潜在功能变化少</li>
+</ul>
+</li>
+</ul>
+<h3 id="快速原型模型："><a href="#快速原型模型：" class="headerlink" title="快速原型模型："></a>快速原型模型：</h3><p>对产品需求进行快速分析，构造原型，运行原型，评价可行性。</p>
+<h3 id="螺旋模型："><a href="#螺旋模型：" class="headerlink" title="螺旋模型："></a>螺旋模型：</h3><p>结合了瀑布模型和原型模型，并加入两者所忽略的风险分析所建立的一种软件开发模型。</p>
+<h3 id="特点：-1"><a href="#特点：-1" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li>软件系统使用的人员复杂，需求确定困难</li>
+<li>软件应用环节多，功能变化多，初期需求变化多。在修改原型的过程中明确功能。</li>
+</ul>
+<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><ul>
+<li>需求获取</li>
+<li>需求建模</li>
+<li>需求规格说明</li>
+<li>需求评审</li>
+</ul>
+<h2 id="可行性研究"><a href="#可行性研究" class="headerlink" title="可行性研究"></a>可行性研究</h2><ul>
+<li><p>经济可行性</p>
+<ul>
+<li>成本估算</li>
+<li>效益估算</li>
+</ul>
+</li>
+<li><p>技术可行性</p>
+<ul>
+<li>及时解决方案的实用性</li>
+<li>技术资源的可用性</li>
+</ul>
+</li>
+<li><p>法律可行性</p>
+<ul>
+<li>责任和侵权问题</li>
+</ul>
+</li>
+<li><p>用户技术可行性</p>
+<ul>
+<li>用户类型</li>
+<li>操作习惯</li>
+<li>单位计算机的使用情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="结构化分析的分析模型"><a href="#结构化分析的分析模型" class="headerlink" title="结构化分析的分析模型"></a>结构化分析的分析模型</h2><ul>
+<li>数据对象描述<br>  -实体-关系图（ERD）：描述对象及数据对象之间的关系；</li>
+<li>加工规格说明<ul>
+<li><strong><em>数据流图（DFD）：描述数据在系统中如何被传送或变换。</em></strong></li>
+</ul>
+</li>
+<li>控制规格说明<ul>
+<li>状态-迁移图（STD）：描述系统对外部时间如何响应，如何动作。</li>
+</ul>
+</li>
 </ul>
 
       
@@ -884,14 +940,11 @@
           </div>
         </div>
       </div>
-      <span id="busuanzi_container_page_pv">
-   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
-</span>
-<footer id="footer">
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; 2019 蒋导
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -899,10 +952,6 @@
     </div>
   </div>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
 
     </div>
     <script>
