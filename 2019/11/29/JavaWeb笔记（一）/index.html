@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://github.com/Director-J/Director-J.github.io">
   <title>JavaWeb笔记（一） | 蒋导的码厂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。     Junit使用：白盒测试  步骤： 定义一个测试类（测试用例）   建议： 测试类名：被用于测试的类名Test  包名：xxx.xxx.xx.Test     定义测试方法：可以独立运行 建议： 方法名：Test测试的方法名 返回">
+  <meta name="description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。">
 <meta name="keywords" content="JavaWeb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb笔记（一）">
 <meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;Director-J&#x2F;Director-J.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;JavaWeb%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="蒋导的码厂">
-<meta property="og:description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。     Junit使用：白盒测试  步骤： 定义一个测试类（测试用例）   建议： 测试类名：被用于测试的类名Test  包名：xxx.xxx.xx.Test     定义测试方法：可以独立运行 建议： 方法名：Test测试的方法名 返回">
+<meta property="og:description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-29T04:13:17.258Z">
+<meta property="og:updated_time" content="2019-11-30T11:16:03.284Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -165,7 +165,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  本文大概有 </span>
-        <span class="post-count">184字</span>
+        <span class="post-count">479字</span>
       </span>
     </span>
 
@@ -205,6 +205,7 @@
 <blockquote>
 <p>需要写代码，关注程序具体的执行流程。</p>
 </blockquote>
+<a id="more"></a>
 </li>
 </ol>
 </li>
@@ -234,12 +235,70 @@
 <li>导入Junit的依赖</li>
 </ol>
 </li>
+<li>判断结果：  <ul>
 <li>红色代表失败，绿色代表成功。</li>
 <li>断言<ul>
 <li>一般我们会使用断言的方式来判断结果</li>
 <li>Assert.assertEquals(expected,result)</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>补充<ul>
+<li>@Before:<ul>
+<li>修饰的方法会在测试方法之前被自动执行</li>
+</ul>
+</li>
+<li>@After:<ul>
+<li>修饰的方法会在测试方法执行之后自动被执行<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>框架： 半成品软件,可以在框架的基础上进行软件开发，简化编码。</p>
+</li>
+<li><p>反射： 将类的各个组成部分封装为其他对象，就是反射机制。</p>
+<ul>
+<li>优点：<ol>
+<li>可以在程序运行过程中操作这个对象。</li>
+<li>可以解耦，提高程序的可扩展性。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>class类获取方式：</p>
+<ol>
+<li>class.forname(“全类名”);:将字节码文件加载进内存，返回class对象<ul>
+<li>多用于配置文件，将类名定义在配置文件中。</li>
+</ul>
+</li>
+<li>类名.class：通过类名的class对象获取<ul>
+<li>多用于参数的传递</li>
+</ul>
+</li>
+<li>对象.getclass():getclass()方法再object类中定义。<ul>
+<li>多用于对象获取字节码的方式</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>结论：<br>  同一个字节码文件（*.class）再一次程序运行当中，只会被加载一次，不论通过哪种方式获取的都是一个对象。</p>
+</li>
+<li><p>class对象功能：</p>
+<ul>
+<li>获取功能<ol>
+<li>Field[] getFields()</li>
+<li>Field[] getField(String name)</li>
+<li></li>
+</ol>
+</li>
+<li>获取构造方法</li>
+<li>获取成员方法</li>
+<li>获取类名</li>
 </ul>
 </li>
 </ul>
@@ -492,11 +551,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">servlet和JSP学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">复习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">复习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">servlet和JSP学习</a>
               </li>
              
               <li class="article-tag-list-item">
