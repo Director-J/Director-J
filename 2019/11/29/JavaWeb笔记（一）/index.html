@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-02T02:09:24.178Z">
+<meta property="og:updated_time" content="2019-12-02T04:13:35.869Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -165,7 +165,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  本文大概有 </span>
-        <span class="post-count">653字</span>
+        <span class="post-count">782字</span>
       </span>
     </span>
 
@@ -312,9 +312,9 @@
 </li>
 <li><p>获取成员方法</p>
 <ol>
-<li>getMethod(String name, 类&lt;?&gt;… parameterTypes) </li>
+<li>getMethod(String name, 类&lt;?&gt;… parameterTypes) ：只能获取public</li>
 <li>getMethods() </li>
-<li>getDeclaredMethod(String name, 类&lt;?&gt;… parameterTypes) </li>
+<li>getDeclaredMethod(String name, 类&lt;?&gt;… parameterTypes) ：需要暴力反射，无视修饰。</li>
 <li>getDeclaredMethods() </li>
 </ol>
 </li>
@@ -325,11 +325,11 @@
 </li>
 <li><p>Field成员变量：</p>
 <ul>
-<li>操作：<ol>
+<li>操作：<ul>
 <li>设置值：set(Object obj, Object value) </li>
 <li>获取值：get(Object obj) </li>
 <li>忽略访问修饰符的安全检查：setAcessible(ture):暴力反射</li>
-</ol>
+</ul>
 </li>
 </ul>
 </li>
@@ -342,6 +342,38 @@
 <li><p>如果使用空参数构造方法创建对象，操作可以简化：Class对象的newInstance方法</p>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li><p>Method获取方法：</p>
+<ul>
+<li>执行方法：<ul>
+<li>invoke(Object obj, Object… args) </li>
+</ul>
+</li>
+<li>获取方法的名称：<ul>
+<li>getName() </li>
+</ul>
+</li>
+<li>获取类名<ul>
+<li>getName()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>案例</p>
+<ul>
+<li>需求：写一个”框架”，不改变任何代码的前提下，可以帮我们创建任意类的对象，执行任意方法。</li>
+<li>实现：<ol>
+<li>配置文件</li>
+<li>反射</li>
+</ol>
+</li>
+<li>步骤<ol>
+<li>将需要创建的对象的全类名和需要执行的方法定义在配置文件中</li>
+<li>在程序中加载配置文件</li>
+<li></li>
+</ol>
 </li>
 </ul>
 </li>
@@ -506,23 +538,25 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
+      <span id="busuanzi_container_page_pv">
+   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
+</span>
+<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 蒋导
+    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
-  <span id="busuanzi_container_site_pv" style='display:none'>
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-  </span>
-
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </footer>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
+</span>
 
     </div>
     <script>
