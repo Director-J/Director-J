@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-30T11:16:03.284Z">
+<meta property="og:updated_time" content="2019-12-02T02:09:24.178Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -165,7 +165,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  本文大概有 </span>
-        <span class="post-count">479字</span>
+        <span class="post-count">653字</span>
       </span>
     </span>
 
@@ -174,7 +174,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  花个 </span>
-        <span class="post-count">1分应该能读完了</span>
+        <span class="post-count">2分应该能读完了</span>
       </span>
     </span>
 </div>
@@ -250,7 +250,7 @@
 </ul>
 </li>
 <li>@After:<ul>
-<li>修饰的方法会在测试方法执行之后自动被执行<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1></li>
+<li>修饰的方法会在测试方法执行之后自动被执行</li>
 </ul>
 </li>
 </ul>
@@ -258,7 +258,7 @@
 </ul>
 </li>
 </ul>
-<ul>
+<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><ul>
 <li><p>框架： 半成品软件,可以在框架的基础上进行软件开发，简化编码。</p>
 </li>
 <li><p>反射： 将类的各个组成部分封装为其他对象，就是反射机制。</p>
@@ -290,15 +290,61 @@
 </li>
 <li><p>class对象功能：</p>
 <ul>
-<li>获取功能<ol>
-<li>Field[] getFields()</li>
-<li>Field[] getField(String name)</li>
-<li></li>
+<li><p>获取功能</p>
+<ol>
+<li><p>Field[] getFields()：获取所有public修饰的成员变量。</p>
+</li>
+<li><p>Field[] getField(String name)：获取指定名字的成员变量。</p>
+</li>
+<li><p>Field getDeclaredField(String name)  ：获取所有的成员变量，不考虑限制。</p>
+</li>
+<li><p>Field[] getDeclaredFields()  ：获取指定名字成员变量，不考虑限制。</p>
+</li>
 </ol>
 </li>
-<li>获取构造方法</li>
-<li>获取成员方法</li>
-<li>获取类名</li>
+<li><p>获取构造方法</p>
+<ol>
+<li>Constructor&lt;?&gt;[] getConstructors()  </li>
+<li>Constructor<T> getConstructor(类&lt;?&gt;… parameterTypes)  </T></li>
+<li>Constructor<T> getDeclaredConstructor(类&lt;?&gt;… parameterTypes) </T></li>
+<li>Constructor&lt;?&gt;[] getDeclaredConstructors()  </li>
+</ol>
+</li>
+<li><p>获取成员方法</p>
+<ol>
+<li>getMethod(String name, 类&lt;?&gt;… parameterTypes) </li>
+<li>getMethods() </li>
+<li>getDeclaredMethod(String name, 类&lt;?&gt;… parameterTypes) </li>
+<li>getDeclaredMethods() </li>
+</ol>
+</li>
+<li><p>获取类名</p>
+<ol>
+<li>getName() </li>
+</ol>
+</li>
+<li><p>Field成员变量：</p>
+<ul>
+<li>操作：<ol>
+<li>设置值：set(Object obj, Object value) </li>
+<li>获取值：get(Object obj) </li>
+<li>忽略访问修饰符的安全检查：setAcessible(ture):暴力反射</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>constructor构造方法：</p>
+<ul>
+<li><p>创建对象：</p>
+<ul>
+<li><p>T newInstance(Object…initargs)</p>
+</li>
+<li><p>如果使用空参数构造方法创建对象，操作可以简化：Class对象的newInstance方法</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -460,25 +506,23 @@
           </div>
         </div>
       </div>
-      <span id="busuanzi_container_page_pv">
-   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
-</span>
-<footer id="footer">
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; 2019 蒋导
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
+  <span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
 
     </div>
     <script>
