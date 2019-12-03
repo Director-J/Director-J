@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蒋导的码厂">
 <meta property="og:description" content="Junit单元测试 测试分类  黑盒测试   不用关注具体的代码逻辑，根据输入看是不是能够得到预期的输出。   白盒测试  需要写代码，关注程序具体的执行流程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-02T04:13:35.869Z">
+<meta property="og:updated_time" content="2019-12-03T06:29:39.643Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蒋导的码厂" type="application/atom+xml">
@@ -165,7 +165,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  本文大概有 </span>
-        <span class="post-count">782字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -174,7 +174,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  花个 </span>
-        <span class="post-count">2分应该能读完了</span>
+        <span class="post-count">5分应该能读完了</span>
       </span>
     </span>
 </div>
@@ -372,14 +372,97 @@
 <li>步骤<ol>
 <li>将需要创建的对象的全类名和需要执行的方法定义在配置文件中</li>
 <li>在程序中加载配置文件</li>
-<li></li>
+<li>使用反射技术来加载类文件进内存</li>
+<li>创建对象</li>
+<li>执行方法<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1></li>
 </ol>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li><p>概念：说明程序，给计算机看的。</p>
+</li>
+<li><p>注释：用文字描述程序的，给程序员看的。</p>
+</li>
+<li><p>定义：从JDK5开始,Java增加对元数据的支持，也就是注解，注解与注释是有一定区别的，可以把注解理解为代码里的特殊标记，这些标记可以在编译，类加载，运行时被读取，并执行相应的处理。通过注解开发人员可以在不改变原有代码和逻辑的情况下在源代码中嵌入补充信息。</p>
+</li>
+<li><p>概念描述：</p>
+<ul>
+<li>jdk1.5之后</li>
+<li>说明程序</li>
+<li>使用注解：@注解名称</li>
 </ul>
+</li>
+<li><p>作用分类：</p>
+<ul>
+<li>编写文档：通过代码李标识的注解生成文档</li>
+<li>编译检查： 通过代码里标识的注解让编译器能够实现基本的编译检查。</li>
+<li>代码分析： 通过代码里的标识注解对代码分析。</li>
+</ul>
+</li>
+<li><p>JDK预定义的一些注解</p>
+<ol>
+<li>@Override：检测被注解的方法是否继承父接口</li>
+<li>@Deprecated:该注解标识的内容已经过时</li>
+<li>@SuppressWarnings：压制警告类<ul>
+<li>一传递参数all @SuppressWarnings(“all”)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>自定义注解</p>
+<ul>
+<li>格式：<br>  元注解<br>  public @interface 注解名称</li>
+<li>本质<ul>
+<li>public interface MyAnno extends java.lang.annotation.Annotation</li>
+</ul>
+</li>
+<li>属性: 接口中可以定义的成员方法（抽象方法）<ul>
+<li>要求：<ol>
+<li>属性的返回值类型<ul>
+<li>基本数据类型</li>
+<li>字符串</li>
+<li>枚举</li>
+<li>注解</li>
+<li>以上类型的数组</li>
+</ul>
+</li>
+<li>定义了属性，在使用时需要给属性值赋值。<ul>
+<li>如果定义属性时，使用default关键字给属性默认初始化值，则使用注解时，可以不进行赋值。</li>
+<li>如果只有一个属性需要赋值，并且属性的名称是value，则value可以省略，直接赋值既可以。</li>
+<li>数组赋值时，使用{}包裹。如果数组只有一个值，则{}可以省略。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>元注解：用于描述注解的注解<ul>
+<li>@Target： 用于描述注解能够作用的位置<ul>
+<li>ElementType取值：<ul>
+<li>TYPE:可以作用在类上</li>
+<li>METHOD:可以作用在方法上</li>
+<li>FIELD：可以作用在变量上</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>@Retention: 描述注解被保留的阶段<ul>
+<li>RUNTIME: 当前被描述的注解，会被保留到class字节码文件中，并被jvm读取到</li>
+</ul>
+</li>
+<li>@Docunmented： 描述注解是否被抽取到api文档内。<ul>
+<li></li>
+</ul>
+</li>
+<li>Inherited： 描述注解是或否被子类继承</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>　　</p>
 
       
 
@@ -538,25 +621,23 @@
           </div>
         </div>
       </div>
-      <span id="busuanzi_container_page_pv">
-   �������Ķ���<span id="busuanzi_value_page_pv"></span>��
-</span>
-<footer id="footer">
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; 2019 蒋导
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
+  <span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
 
     </div>
     <script>
@@ -629,11 +710,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">复习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">servlet和JSP学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">servlet和JSP学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">复习</a>
               </li>
              
               <li class="article-tag-list-item">
